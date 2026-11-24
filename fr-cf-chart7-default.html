@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>417 milliards de livres et un taux de défaut « inférieur à 3 % »</title>
+<style>
+:root{--blue:#378ADD;--coral:#D85A30;--teal:#1D9E75;--amber:#BA7517;--gray:#888780;--bg:#fff;--fg:#2c2c2a;--muted:#5f5e5a;--soft:#f1efe8;--line:#e3e1d9;--track:#efede6;--coral-t:#faece7;--coral-d:#993C1D;--teal-t:#e3f3ec;--teal-d:#0F6E50;--amber-t:#fbf0de;--amber-d:#7A4C0D;--blue-t:#e6f0fb;--blue-d:#1F5F9E;--tx:-50%;}
+html[dir=rtl]{--tx:50%;}
+@media(prefers-color-scheme:dark){:root{--blue:#85B7EB;--coral:#F0997B;--teal:#5DCAA5;--amber:#FAC775;--gray:#a3a198;--bg:#1a1a18;--fg:#d3d1c7;--muted:#b4b2a9;--soft:#2c2c2a;--line:#3a3a37;--track:#2c2c2a;--coral-t:#3a2620;--coral-d:#F5B9A3;--teal-t:#1b3029;--teal-d:#8FDCC0;--amber-t:#382d1c;--amber-d:#FAD9A0;--blue-t:#1d2939;--blue-d:#A9CCF2;}}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased;}
+#root{padding:clamp(12px,3vw,20px);}
+.hdr{border-inline-start:3px solid #378ADD;padding-inline-start:10px;margin-bottom:10px;}
+.tag{font-size:clamp(9px,2vw,10px);font-weight:700;letter-spacing:.06em;color:var(--gray);margin-bottom:2px;}
+.ttl{font-size:clamp(13px,3.5vw,15px);font-weight:700;line-height:1.4;margin-bottom:2px;}
+.sub{font-size:clamp(11px,2.5vw,12px);color:var(--muted);line-height:1.5;}
+.callout{background:var(--soft);border-inline-start:3px solid #378ADD;padding:8px 11px;font-size:clamp(11px,2.5vw,12px);color:var(--muted);line-height:1.6;margin:9px 0 12px;font-style:italic;}
+.src{font-size:clamp(9px,2vw,10px);color:var(--gray);margin-top:10px;line-height:1.5;}
+.ins{border-inline-start:3px solid var(--coral);background:var(--coral-t);color:var(--coral-d);padding:9px 12px;border-radius:6px;font-size:clamp(10.5px,2.5vw,11.5px);line-height:1.65;margin-top:12px;font-weight:500;}
+.ins.amber{border-color:var(--amber);background:var(--amber-t);color:var(--amber-d);}
+.ins.teal{border-color:var(--teal);background:var(--teal-t);color:var(--teal-d);}
+.ins.blue{border-color:var(--blue);background:var(--blue-t);color:var(--blue-d);}
+.note{font-size:clamp(9.5px,2.2vw,10.5px);color:var(--muted);line-height:1.6;margin-top:9px;}
+.sec{font-size:clamp(10.5px,2.6vw,11.5px);font-weight:700;margin:4px 0 9px;display:flex;align-items:center;gap:6px;}
+.sec:before{content:"";flex:0 0 auto;width:8px;height:8px;border-radius:2px;background:#378ADD;}
+.gap{height:14px;}
+.lg{display:flex;flex-wrap:wrap;gap:5px 14px;font-size:clamp(9.5px,2.2vw,10.5px);color:var(--muted);margin-top:6px;}
+.lg span{display:inline-flex;align-items:center;gap:5px;}
+.sw{width:12px;height:8px;border-radius:2px;display:inline-block;flex:0 0 auto;}
+.hatch{background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.5) 0 2px,transparent 2px 5px);}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block;}
+.hb-row{margin-bottom:clamp(8px,2vw,10px);}
+.hb-lab{display:flex;flex-wrap:wrap;align-items:baseline;gap:1px 7px;margin-bottom:3px;line-height:1.35;}
+.hb-n{font-weight:700;font-size:clamp(10.5px,2.6vw,12px);}
+.hb-s{font-size:clamp(9px,2.2vw,10px);color:var(--muted);}
+.hb-bar{display:flex;align-items:center;gap:8px;}
+.hb-tw{position:relative;flex:1;}
+.hb-track{position:relative;height:clamp(11px,2.6vw,13px);background:var(--track);border-radius:3px;overflow:hidden;}
+.hb-f{position:absolute;top:0;bottom:0;width:0;border-radius:3px;transition:width 1s cubic-bezier(.2,.7,.2,1);}
+.hb-ref{position:absolute;top:-5px;bottom:-5px;width:0;border-inline-start:1.5px dashed var(--fg);opacity:.6;}
+.hb-mk{position:absolute;top:-3px;bottom:-3px;width:0;border-inline-start:2.5px solid var(--fg);}
+.hb-v{flex:0 0 auto;min-width:4.8em;font-weight:800;font-size:clamp(11px,2.8vw,13px);text-align:end;}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
+.tile{border-radius:8px;padding:clamp(9px,2.5vw,12px);background:var(--soft);}
+.tile .big{font-size:clamp(20px,5.5vw,26px);font-weight:800;line-height:1.1;}
+.tile .lb{font-size:clamp(10px,2.4vw,11px);margin-top:4px;line-height:1.45;}
+.tile .sm{font-size:clamp(9px,2.1vw,10px);color:var(--muted);margin-top:4px;line-height:1.4;}
+.pop{opacity:0;transition:opacity .5s ease;}
+.cols{display:grid;grid-template-rows:auto auto auto auto;grid-auto-flow:column;grid-auto-columns:minmax(0,120px);justify-content:center;column-gap:clamp(14px,5vw,34px);padding-top:6px;text-align:center;}
+.col{display:contents;}
+.col-v{font-size:clamp(17px,4.6vw,21px);font-weight:800;line-height:1.15;margin-bottom:5px;align-self:end;}
+.col-a{position:relative;height:clamp(120px,32vw,160px);border-bottom:1.5px solid var(--line);}
+.col-f{position:absolute;bottom:0;left:16%;right:16%;height:0;border-radius:5px 5px 0 0;transition:height 1s cubic-bezier(.2,.7,.2,1);}
+.col-na{position:absolute;bottom:0;left:16%;right:16%;border:1.5px dashed var(--gray);border-bottom:none;border-radius:5px 5px 0 0;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:var(--gray);}
+.col-l{font-size:clamp(10.5px,2.6vw,12px);font-weight:700;margin-top:6px;}
+.col-s{font-size:clamp(9px,2.1vw,10px);color:var(--muted);line-height:1.35;margin-top:2px;}
+.stk{display:flex;height:28px;border-radius:5px;overflow:hidden;background:var(--track);}
+.stk>div{width:0;height:100%;display:flex;align-items:center;justify-content:center;font-size:clamp(9px,2.2vw,10.5px);font-weight:800;color:#fff;transition:width 1s cubic-bezier(.2,.7,.2,1);overflow:hidden;white-space:nowrap;}
+
+.cgw-row{display:flex;flex-wrap:wrap;gap:10px 22px;}
+.cgw{flex:1 1 250px;min-width:0;}
+.col-sep{height:100%;border-inline-start:1.5px dashed var(--gray);margin-inline-start:6px;opacity:.7;}
+.col-f.h{opacity:.6;}
+.g3w{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
+@media(max-width:420px){.g3w{grid-template-columns:repeat(2,minmax(0,1fr));}}
+.miss{margin-top:12px;border:1.5px dashed var(--line);border-radius:8px;padding:10px 12px;}
+.miss p{display:flex;justify-content:space-between;gap:10px;font-size:clamp(10.5px,2.6vw,11.5px);padding:4px 0;}
+.miss b{color:var(--coral);white-space:nowrap;}
+.units{display:flex;flex-wrap:wrap;gap:5px;margin:2px 0 6px;}
+.un{width:clamp(18px,6vw,28px);height:clamp(18px,6vw,28px);border-radius:4px;}
+.sb{position:relative;}
+.sb-r{display:grid;grid-template-columns:minmax(0,40%) minmax(0,1fr) 4.6em;gap:8px;align-items:center;padding:5px 0;}
+.sb-l{font-size:clamp(10.5px,2.6vw,12px);line-height:1.3;font-weight:600;}
+.sb-tw{position:relative;height:16px;}
+.sb-t{position:absolute;inset:0;background:var(--track);border-radius:3px;overflow:hidden;}
+.sb-f{position:absolute;top:0;bottom:0;width:0;transition:width 1s cubic-bezier(.2,.7,.2,1);}
+.sb-v{font-weight:800;font-size:clamp(11px,2.8vw,13px);text-align:end;}
+.sb-ov{position:absolute;inset:0;display:grid;grid-template-columns:minmax(0,40%) minmax(0,1fr) 4.6em;gap:8px;pointer-events:none;z-index:2;}
+.sb-oc{position:relative;}
+.sb-z{position:absolute;top:2px;bottom:2px;width:0;border-inline-start:1.5px solid var(--muted);}
+</style>
+</head>
+<body><div id="root">
+  <div class="hdr"><p class="tag">Zawia3 · Graphique 7 sur 10</p><p class="ttl">417 milliards de livres et un taux de défaut « inférieur à 3 % »</p><p class="sub">Portefeuilles de financement non bancaire fin 2025 : ce que la FRA a annoncé et ce qu'elle n'a pas dit</p></div>
+  <div class="callout">« Ils atteignaient fin 2025 environ 417 milliards de livres répartis sur plus de 9,8 millions de contrats, avec un taux de défaut inférieur à 3 %, sans préciser la méthode de calcul de ce taux. »</div>
+  <p class="sec">Ce que la FRA a annoncé pour fin 2025</p><div class="g3"><div class="tile"><div class="sm" style="margin:0 0 2px">&nbsp;</div><div class="big" style="color:var(--blue)">417</div><div class="lb">milliards de livres de portefeuilles de financement non bancaire</div><div class="sm">≈ 8,6 milliards $</div></div><div class="tile"><div class="sm" style="margin:0 0 2px">plus de</div><div class="big" style="color:var(--blue)">9,8</div><div class="lb">millions de contrats</div></div><div class="tile"><div class="sm" style="margin:0 0 2px">moins de</div><div class="big" style="color:var(--coral)">3 %</div><div class="lb">taux de défaut annoncé</div></div></div><p class="sec" style="margin-top:14px">Ce qu'elle n'a pas annoncé</p><div class="miss"><p><span>Défauts par activité</span><b>non publiés</b></p><p><span>Méthode de calcul du taux</span><b>non précisée</b></p></div><div class="ins ">La FRA annonce un taux de défaut inférieur à 3 % sur des portefeuilles de 417 milliards de livres, sans le détailler par activité ni expliquer son mode de calcul.</div>
+  <p class="src">Source : Autorité de régulation financière (FRA), mai 2026</p>
+</div>
+<script>
+(function(){setTimeout(function(){var a=document.querySelectorAll("[data-w]");for(var i=0;i<a.length;i++){a[i].style.width=a[i].getAttribute("data-w");}var b=document.querySelectorAll("[data-h]");for(var j=0;j<b.length;j++){b[j].style.height=b[j].getAttribute("data-h");}var c=document.querySelectorAll(".pop");for(var k=0;k<c.length;k++){c[k].style.opacity="1";}},180);})();
+(function(){function notify(){var h=document.getElementById("root").offsetHeight;window.parent.postMessage({type:"chartResize",height:h},"*");}
+setTimeout(notify,1400);window.addEventListener("resize",notify);
+try{new ResizeObserver(function(){setTimeout(notify,80);}).observe(document.body);}catch(e){}})();
+</script></body></html>
